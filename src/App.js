@@ -9,7 +9,7 @@ function App() {
 			</div>
 			<div className="col-span-7 lg:bg-gray-200 p-8 flex items-center justify-center">
 				<div className="max-w-md">
-					<img src={img} />
+					<img src={img} alt='login'/>
 				</div>
 			</div>
 		</div>
