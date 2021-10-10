@@ -1,18 +1,14 @@
 import "./App.css"
-import SignUp from "./components/SignUp"
-import img from "../src/assets/images/intro.svg"
+
+import { Route, Switch } from "react-router-dom"
+import SignUpPage from "./pages/SignUpPage"
+import HomePage from "./pages/HomePage"
 function App() {
 	return (
-		<div className=" grid grid-cols-1 lg:grid-cols-12 h-screen">
-			<div className="col-span-5 ">
-				<SignUp />
-			</div>
-			<div className="col-span-7 lg:bg-gray-200 p-8 flex items-center justify-center">
-				<div className="max-w-md">
-					<img src={img} alt='login'/>
-				</div>
-			</div>
-		</div>
+		<Switch>
+			<Route path="/signup" component={SignUpPage} />
+			<Route path="/" exact component={HomePage} />
+		</Switch>
 	)
 }
 
