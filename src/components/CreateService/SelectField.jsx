@@ -8,7 +8,7 @@ const SelectField = ({ options, placeholder, styles, className, ...props }) => {
 
 	// style object for react-select
 	const customStyles = {
-		menu: (provided, state) => ({
+		menu: (provided) => ({
 			...provided,
 			color: "#555",
 			fontWeight: "500",
@@ -44,8 +44,8 @@ const SelectField = ({ options, placeholder, styles, className, ...props }) => {
 
 			{/* a placeholder to keep integrity of the form layout  */}
 			{(!meta.touched || !meta.error) && (
-				<small className="font-medium text-white">
-					nothing to snife here buddy :))
+				<small className="font-medium text-white select-none">
+					{field.name}
 				</small>
 			)}
 		</div>
